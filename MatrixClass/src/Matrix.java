@@ -8,7 +8,7 @@ public class Matrix {
         data = new int[rows][cols];
     }
 
-    // Constructor with existing data
+    // Constructor 
     public Matrix(int[][] data) {
         this.data = new int[data.length][data[0].length];
         for (int i = 0; i < data.length; i++) {
@@ -18,7 +18,7 @@ public class Matrix {
         }
     }
 
-    // Fill with random numbers 1–10
+    // Random numbers
     public void populateRandom() {
         Random rand = new Random();
         for (int i = 0; i < data.length; i++) {
@@ -28,7 +28,7 @@ public class Matrix {
         }
     }
 
-    // Add two matrices
+    // Add 
     public Matrix add(Matrix other) {
         if (data.length != other.data.length || data[0].length != other.data[0].length) {
             throw new IllegalArgumentException("Matrices must have the same dimensions to add!");
@@ -42,7 +42,7 @@ public class Matrix {
         return result;
     }
 
-    // Multiply two matrices
+    // Multiply 
     public Matrix multiply(Matrix other) {
         if (data[0].length != other.data.length) {
             throw new IllegalArgumentException("Invalid dimensions");
@@ -60,7 +60,7 @@ public class Matrix {
         return result;
     }
 
-    // Print matrix in nice rows
+    // Print matrix 
     public String toString() {
         StringBuilder sb = new StringBuilder();
         for (int[] row : data) {
