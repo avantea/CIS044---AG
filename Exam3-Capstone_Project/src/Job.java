@@ -1,7 +1,14 @@
 public class Job {
+
+    // Unique identifier for the job
     private int id;
+
+    // Quick description of what the job is
     private String description;
-    private int priority; // higher priority
+
+    // Priority of this job (higher number means higher priority)
+    private int priority;
+
 
     public Job(int id, String description, int priority) {
         this.id = id;
@@ -9,14 +16,17 @@ public class Job {
         this.priority = priority;
     }
 
+    // Getter for id
     public int getId() {
         return id;
     }
 
+    // Getter for description
     public String getDescription() {
         return description;
     }
 
+    // Getter for priority
     public int getPriority() {
         return priority;
     }
@@ -29,4 +39,5 @@ public class Job {
                 '}';
     }
 }
+
 
